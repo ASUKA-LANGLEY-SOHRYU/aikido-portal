@@ -1,0 +1,39 @@
+server:
+  port: 8080
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10GB
+      max-request-size: 10GB
+  application:
+    name: TrainersPortal
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5435/trainersPortal
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+minio:
+  url: http://localhost:9000
+  access-key: fJwxrJZtFIMjOBuqplQP
+  secret-key: gYh5kzTtthFWLQmE1J9BHcKezH47aW3tBt2I4Dwn
+  bucket: trainersportal
+service:
+  jwt:
+    secret: flnaksdjg6246246246fighafa426246shbdfsdjh62467a86b96vasvchjkasgerhsalkdm32525akjaiupaerhhfsdfdsfsdhdjfjyitruyrhgfh
+    access:
+      expirationMinutes: 30
+    refresh:
+      expirationDays: 30
+logging:
+  level:
+    root: INFO
+    com.prosvirnin.trainersportal.service: DEBUG
+  file:
+    name: logs/log.log

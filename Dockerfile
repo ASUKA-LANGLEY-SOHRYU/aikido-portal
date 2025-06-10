@@ -1,7 +1,7 @@
 FROM gradle:jdk21-corretto-al2023 AS TEMP_BUILD_IMAGE
 ENV APP_HOME=/usr/app/
 WORKDIR $APP_HOME
-COPY build.gradle.kts settings.gradle.kts gradlew $APP_HOME
+COPY build.gradle settings.gradle gradlew $APP_HOME
 COPY gradle $APP_HOME/gradle
 COPY ./src ./src
 RUN chmod +x $APP_HOME/gradlew

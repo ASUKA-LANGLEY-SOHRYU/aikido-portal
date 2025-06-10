@@ -2,14 +2,18 @@ package com.prosvirnin.trainersportal.model.dto.user;
 
 import com.prosvirnin.trainersportal.model.domain.user.Gender;
 import com.prosvirnin.trainersportal.model.domain.user.Role;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.Set;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserProfileDto {
     private Long id;
     private Set<Role> roles;

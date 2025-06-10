@@ -117,7 +117,7 @@ public class DefaultUserService implements UserService, UserDetailsService {
                     return UserListItem.builder()
                             .id(u.getId())
                             .fullName(u.getFullName())
-                            .roles(u.getRoles()) // теперь можно безопасно
+                            .roles(u.getRoles())
                             .phoneNumber(u.getPhoneNumber())
                             .birthDate(u.getBirthDate())
                             .kyu(u.getKyu())
